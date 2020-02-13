@@ -6,7 +6,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
-public class emailSender implements Runnable  {
+public class EmailSender implements Runnable  {
     private String subject;
     private String smtpHost;
     private String smtpUsername;
@@ -16,7 +16,7 @@ public class emailSender implements Runnable  {
     private String smtpPort;
 
 
-    public emailSender(String host, String subject, String user, String password, String message, String receiver, String port){
+    public EmailSender(String host, String subject, String user, String password, String message, String receiver, String port){
         this.subject=subject;
         this.smtpHost=host;
         this.smtpPassword=password;
