@@ -6,7 +6,7 @@ import org.apache.log4j.spi.LoggingEvent;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class emailAppender extends AppenderSkeleton {
+public class EmailAppender extends AppenderSkeleton {
     private String subject;
     private String smtpHost;
     private String smtpUsername;
@@ -21,7 +21,7 @@ public class emailAppender extends AppenderSkeleton {
     }
     @Override
     protected void append(LoggingEvent event) {
-        emailSender emailNotification = new emailSender(getSmtpHost(),getSubject(),getSmtpUsername(),getSmtpPassword(),event.getMessage().toString(),getReceiver(),getSmtpPort());
+        EmailSender emailNotification = new EmailSender(getSmtpHost(),getSubject(),getSmtpUsername(),getSmtpPassword(),event.getMessage().toString(),getReceiver(),getSmtpPort());
         threadPool.submit(emailNotification);
     }
 
