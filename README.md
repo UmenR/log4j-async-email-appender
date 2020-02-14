@@ -9,7 +9,7 @@ This email appender creates a threadpool of 5 threads using the java EventExecut
 * Follow instructions below to add appender to log4j.properties file 
 
 ```
-log4j.appender.mailappender=org.wso2.log4j.appenders.emailAppender
+log4j.appender.mailappender=org.wso2.log4j.appenders.EmailAppender
 log4j.appender.mailappender.layout=org.apache.log4j.PatternLayout
 log4j.appender.mailappender.layout.ConversionPattern=%-4r [%t] %-5p %c %x - %m%n
 log4j.appender.mailappender.smtpHost=<host>
