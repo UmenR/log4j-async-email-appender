@@ -19,9 +19,13 @@ package sample.log4j.appender.async.mail.sender;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import javax.mail.*;
-import javax.mail.internet.InternetAddress;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.PasswordAuthentication;
 import javax.mail.internet.MimeMessage;
+import javax.mail.internet.InternetAddress;
+import javax.mail.Message;
+import javax.mail.Transport;
 import java.util.Properties;
 
 public class EmailSender implements Runnable  {
