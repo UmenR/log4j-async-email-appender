@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+//**MUST BE REMOVED IN PROD**
 package sample.log4j.appender.async.mail.sender;
 
 import org.apache.log4j.Logger;
