@@ -26,3 +26,5 @@ log4j.appender.ASYNC_EMAIL_SENDER.filter.f.AcceptOnMatch=TRUE
 log4j.appender.ASYNC_EMAIL_SENDER.filter.f2=org.apache.log4j.varia.DenyAllFilter
 ```
 By default the email sender has "starttls.enabled" property set to true.
+
+###NOTE Please Remove the EmailTester.java file when building for production environments.
