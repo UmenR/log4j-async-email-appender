@@ -20,11 +20,14 @@ log4j.appender.ASYNC_EMAIL_SENDER.smtpPassword=<password>
 log4j.appender.ASYNC_EMAIL_SENDER.smtpPort=587
 log4j.appender.ASYNC_EMAIL_SENDER.subject=<subject>
 log4j.appender.ASYNC_EMAIL_SENDER.receiver=<receiver>
-log4j.appender.ASYNC_EMAIL_SENDER.filter.f=org.apache.log4j.varia.StringMatchFilter
-log4j.appender.ASYNC_EMAIL_SENDER.filter.f.StringToMatch=Error occurred while obtaining LDAP connection
-log4j.appender.ASYNC_EMAIL_SENDER.filter.f.AcceptOnMatch=TRUE
+log4j.appender.ASYNC_EMAIL_SENDER.filter.f0=org.apache.log4j.varia.LevelRangeFilter
+log4j.appender.ASYNC_EMAIL_SENDER.filter.f0.LevelMin=ERROR
+log4j.appender.ASYNC_EMAIL_SENDER.filter.f0.LevelMax=FATAL
+log4j.appender.ASYNC_EMAIL_SENDER.filter.f1=org.apache.log4j.varia.StringMatchFilter
+log4j.appender.ASYNC_EMAIL_SENDER.filter.f1.StringToMatch=Error occurred while obtaining LDAP connection
+log4j.appender.ASYNC_EMAIL_SENDER.filter.f1.AcceptOnMatch=TRUE
 log4j.appender.ASYNC_EMAIL_SENDER.filter.f2=org.apache.log4j.varia.DenyAllFilter
 ```
 By default the email sender has "starttls.enabled" property set to true.
 
-### ***NOTE Please Remove the EmailTester.java file when building for production environments.***
+#### ***NOTE Please Remove the EmailTester.java file when building for production environments.***
