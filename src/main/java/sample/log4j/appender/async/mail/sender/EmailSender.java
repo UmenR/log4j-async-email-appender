@@ -73,7 +73,7 @@ public class EmailSender implements Runnable  {
             Transport.send(message);
             log.info("Email Notification sent successfully to " + getReceiver());
         } catch (MessagingException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
     public String getSmtpUsername() {
